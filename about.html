@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./images/webicon.svg">
+    <title>Vem står bakom Webbexpert? - Om | Webbexpert</title>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="./images/logo.svg" type="image/svg+xml" alt="Webbexpert Logotypen">
+      </a>
+    </header>
+    <nav aria-label="Huvudmeny">
+      <ul>
+        <li><a href="./courses.html">Kurser</a></li>
+        <li><a href="./pictures.html">Bilder</a></li>
+        <li><a href="./contact.html">Kontakt</a></li>
+        <li><a href="./about.html">Om</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Om mig</h1>
+      <h2>Vem står bakom Webbexpert?</h2>
+      <img src="./images/coffee.png" type="image/png" alt="En kopp kaffe latte står på bordet">
+      <p>Det är jag som står bakom Webbexpert.</p>
+    </main>
+    <footer>
+      <h3>Webbutveckling I DT057G D2095 HT2025</h3>
+      <p><time datetime="2025-09-25">2025-09-25</time></p>
+      <p>Weronika Sleboda</p>
+      <p><a href="mailto:wesl2400@student.miun.se">E-post</a></p>
+    </footer>
+  </body>
+</html>
+
+<!--
+** <html lang='sv'> sätt standardspråket till svenska, eftersom textinnehållet på webbplatsen
+** är på svenska. Detta är ett av WCAG:s karv på användartillgängligheten och hjälper skärmläsare
+** att uttala textinnehållet på webbsidan korrekt
+** <meta name="viewport" content="width=device-width, initial-scale=1.0"> - gör webbsidan responsiv,
+** sätt bredden till enhetens bredd och zooma webbsidan med 100% (initial-scale=1.0)
+** <meta charset='UTF-8'> Använd teckenenkodningen UTF-8 som omfattar tecken och symboler
+** från världens alla språk
+** <link rel="icon" type="image/svg+xml" href="./images/webicon.svg"> - importera webbikonen 
+** (visas bland annat i webbfliken) av typen 'svg', och hämta bilden 'webbicon.svg' från mappen
+** 'images' via en relativ sökväg
+** <title> Sätt titeln för webbsidan (visas i webbfliken). Bästa praxis för användartillgängligheten
+** (WCAG standard) och sökmotoroptimeringen (SEO) används. Titeln ska vara informativ och innålla sökbara ord
+** <head> innehåller information som ska läsas av maskinen (den aktuella enheten)
+** <body> innehåller information som ska läsas av användare
+** <header> semantisk HTML tagg som används för introducerande innehåll och logotyper
+** <a> - taggen omdirigerar användare till antingen en annan HTM sida eller tagg 
+** i det nuvarande HTML dokumentet
+** <nav> - semantisk tagg för navigationsfältet, använder 'aria-label' för tydligheten 
+** och användartillgängligheten i enlighet med WCAG:s bästa praxis, eftersom en extra sidomeny
+** tillkommer senare i pictures.html och vill ordna dem på ett logiskt sätt
+** Referens: https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html
+** <ul> - oordnad lista
+** <li> - listobjekt
+** <a> - länk som omdirigerar användare till antingen en anna HTML sida eller tagg i det nuvarande
+** HTML dokumentet, via attributet 'href', alla sidor länkas via relativa sökvägar eftersom
+** webbplatsen ska publiceras Github Pages och använda Githubs domän + namnet på Github repositoriet 
+** som rotkatalog
+** <main> semantisk tagg för huvudinnehållet
+** <h1> rubriken av förstagradens viktighet, bara en används per sida enligt bästa praxis
+** <h2> rubrik av andra gradens viktighet
+** <footer> semantisk tagg för sidfot
+** <h3> - rubrik av tredjegradens viktighet
+** <a href="mailto:wesl2400@student.miun.se"> mailto öppnar en e-postklient i ett nytt fönster 
+** (klienten skiljer sig mellan operativsystem, Windows använder Outlook) och anger den angivna
+** e-postadressen automatiskt som mottagare
+** Referens: https://mailtrap.io/blog/mailto-links-explained/
+** <time> semantisk tagg för datum, 'datetime' attributet används för bättre sökmotoroptimering och
+** extra datumrelaterade funktionaliteter
+** Referens: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time
+** <p> - står för paragraf, omfattar vanlig text
+-->

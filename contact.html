@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./images/webicon.svg">
+    <title>Skicka ett meddelande till Webbexpert - Kontakt | Webbexpert</title>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="./images/logo.svg" type="image/svg+xml" alt="Webbexpert Logotypen">
+      </a>
+    </header>
+    <nav aria-label="Huvudmeny">
+      <ul>
+        <li><a href="./courses.html">Kurser</a></li>
+        <li><a href="./pictures.html">Bilder</a></li>
+        <li><a href="./contact.html">Kontakt</a></li>
+        <li><a href="./about.html">Om</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Kontakt</h1>
+      <form method="post">
+        <fieldset>
+          <legend>Kontaktformulär</legend>
+          <label for="name">Namn</label><br>
+          <input type="text" name="name" id="name" placeholder="Förnamn och efternamn" required><br>
+          <label for="email">E-postadress</label><br>
+          <input type="text" name="email" id="email" placeholder="E-post" required><br>
+          <label for="profession">Yrke</label><br>
+          <select required>
+            <option>Spelutvecklare</option>
+            <option>Frontendutvecklare</option>
+            <option>Backendutvecklare</option>
+            <option>Fullstackutvecklare</option>
+            <option>Mobilutvecklare</option>
+            <option>DevOps</option>
+            <option>Systemadministratör</option>
+            <option>IT-supporttekniker</option>
+          </select><br>
+          <label for="newsletter">Nyhetsbrev</label><br>
+          <input type="radio" id="newsletter"><br>
+          <label for="message">Meddelande</label><br>
+          <textarea id="message" name="message" rows="5"></textarea><br>
+          <input type="submit" value="Skicka">
+          <input type="reset" value="Nollställ">
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <h3>Webbutveckling I DT057G D2095 HT2025</h3>
+      <p><time datetime="2025-09-25">2025-09-25</time></p>
+      <p>Weronika Sleboda</p>
+      <p><a href="mailto:wesl2400@student.miun.se">E-post</a></p>
+    </footer>
+  </body>
+</html>
+
+<!--
+** <html lang='sv'> sätt standardspråket till svenska, eftersom textinnehållet på webbplatsen
+** är på svenska. Detta är ett av WCAG:s karv på användartillgängligheten och hjälper skärmläsare
+** att uttala textinnehållet på webbsidan korrekt
+** <meta name="viewport" content="width=device-width, initial-scale=1.0"> - gör webbsidan responsiv,
+** sätt bredden till enhetens bredd och zooma webbsidan med 100% (initial-scale=1.0)
+** <meta charset='UTF-8'> Använd teckenenkodningen UTF-8 som omfattar tecken och symboler
+** från världens alla språk
+** <link rel="icon" type="image/svg+xml" href="./images/webicon.svg"> - importera webbikonen 
+** (visas bland annat i webbfliken) av typen 'svg', och hämta bilden 'webbicon.svg' från mappen
+** 'images' via en relativ sökväg
+** <title> Sätt titeln för webbsidan (visas i webbfliken). Bästa praxis för användartillgängligheten
+** (WCAG standard) och sökmotoroptimeringen (SEO) används. Titeln ska vara informativ och innålla sökbara ord
+** <head> innehåller information som ska läsas av maskinen (den aktuella enheten)
+** <body> innehåller information som ska läsas av användare
+** <header> semantisk HTML tagg som används för introducerande innehåll och logotyper
+** <a> - taggen omdirigerar användare till antingen en annan HTM sida eller tagg 
+** i det nuvarande HTML dokumentet
+** <nav> - semantisk tagg för navigationsfältet, använder 'aria-label' för tydligheten 
+** och användartillgängligheten i enlighet med WCAG:s bästa praxis, eftersom en extra sidomeny
+** tillkommer senare i pictures.html och vill ordna dem på ett logiskt sätt
+** Referens: https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html
+** <ul> - oordnad lista
+** <li> - listobjekt
+** <a> - länk som omdirigerar användare till antingen en anna HTML sida eller tagg i det nuvarande
+** HTML dokumentet, via attributet 'href', alla sidor länkas via relativa sökvägar eftersom
+** webbplatsen ska publiceras Github Pages och använda Githubs domän + namnet på Github repositoriet 
+** som rotkatalog
+** <main> semantisk tagg för huvudinnehållet
+** <h1> rubriken av förstagradens viktighet, bara en används per sida enligt bästa praxis
+** <form method='post'> skapar ett formulär och skickar dess data via HTTP metoden
+** 'POST'. 'POST' metoden används för att överföra data till en server. I motsats till 'GET'
+** metoden bifogar den inte den skickade datan i URL addressen
+** Referens: https://portswigger.net/kb/issues/00400300_password-submitted-using-get-method
+** Referens: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST
+** <fieldset> - används för bättre strukturering av innehållet i ett formulär
+** Rekommenderas för användartillgängligheten enligt WCAG:s standard
+** Referens: https://www.w3.org/TR/WCAG20-TECHS/H71.html
+** <legend> Tydliggör vad <filedset> innehållet handlar om
+** <label for='[id]'> är rubrik åt elementet med det angivna ID
+** <input type="text" name="[...]" id="[...]" placeholder="[...]" required> taggen som 
+** tar emot data av typen text (type='text'), med det angivna namnet 
+** enligt parstrukturen namn-värde (name='[...]'), och med det angiva ID:et (id='[...]') och
+** platshållarvärdet (placeholder='[...]') och datainmatningen är obligatorisk i det här fallet (required)
+** <select><option><option></select> - visar en lista över väljbara alternativ
+** <br> - lägger till extra rad så att nästa element som följer efter börjar från ny rad
+** <input type='radio'> - inmatning av typen 'radioknapp' med en cirkel som går att klicka på och markera
+** <textarea id="[...]" name="[...]" rows="5"></textarea><br> - skapa en inmatningsyta för text
+** på 5 rader (rows='5') och  det angivna id:et (id='[...]') och namnet (name='[...]')
+** <footer> semantisk tagg för sidfot
+** <h3> - rubrik av tredjegradens viktighet
+** <a href="mailto:wesl2400@student.miun.se"> mailto öppnar en e-postklient i ett nytt fönster 
+** (klienten skiljer sig mellan operativsystem, Windows använder Outlook) och anger den angivna
+** e-postadressen automatiskt som mottagare
+** <input type="submit" value="Skicka"> - skapa inmatningen av typen 'submit', vilket innebär 
+** att en knappliknande inmatning skapas som skickar/lämnar in data när den klickas på (type='submit')
+** Datan skickas som HTTP förfrågan med metoden som anges i form taggen
+** <input type="reset" value="Nollställ"> - nollställer formuläret
+** Referens: https://mailtrap.io/blog/mailto-links-explained/
+** <time> semantisk tagg för datum, 'datetime' attributet används för bättre sökmotoroptimering och
+** extra datumrelaterade funktionaliteter
+** Referens: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time
+** <p> - står för paragraf, omfattar vanlig text
+-->
