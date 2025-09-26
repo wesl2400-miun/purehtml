@@ -30,15 +30,15 @@
           <label for="email">E-postadress</label><br>
           <input type="text" name="email" id="email" placeholder="E-post" required><br>
           <label for="profession">Yrke</label><br>
-          <select required>
-            <option>Spelutvecklare</option>
-            <option>Frontendutvecklare</option>
-            <option>Backendutvecklare</option>
-            <option>Fullstackutvecklare</option>
-            <option>Mobilutvecklare</option>
-            <option>DevOps</option>
-            <option>Systemadministratör</option>
-            <option>IT-supporttekniker</option>
+          <select name="profession" id="profession" required>
+            <option value="Spelutvecklare">Spelutvecklare</option>
+            <option value="Frontendutvecklare">Frontendutvecklare</option>
+            <option value="Backendutvecklare">Backendutvecklare</option>
+            <option value="Fullstackutvecklare">Fullstackutvecklare</option>
+            <option value="Mobilutvecklare">Mobilutvecklare</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Systemadministratör">Systemadministratör</option>
+            <option value="IT-supporttekniker">IT-supporttekniker</option>
           </select><br>
           <label for="newsletter">Nyhetsbrev</label><br>
           <input type="radio" id="newsletter"><br>
@@ -103,6 +103,8 @@
 ** enligt parstrukturen namn-värde (name='[...]'), och med det angiva ID:et (id='[...]') och
 ** platshållarvärdet (placeholder='[...]') och datainmatningen är obligatorisk i det här fallet (required)
 ** <select><option><option></select> - visar en lista över väljbara alternativ
+** UPPDATERING: 2025-09-26 - Lade till id och namn till <select> för identiferingen
+** och värdena för <option> taggar (value='[...]'). Dessa ska skickas som HTTP förfrågan med POST metoden
 ** <br> - lägger till extra rad så att nästa element som följer efter börjar från ny rad
 ** <input type='radio'> - inmatning av typen 'radioknapp' med en cirkel som går att klicka på och markera
 ** <textarea id="[...]" name="[...]" rows="5"></textarea><br> - skapa en inmatningsyta för text
